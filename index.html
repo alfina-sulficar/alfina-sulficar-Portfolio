@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alfina Sulficar | Power Platform &amp; Dynamics 365 Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fb;--surface:#ffffff;--ink:#12172b;--muted:#556079;--line:#e3e7f0;
+  --accent:#4f46e5;--accent2:#0ea5a4;--chip:#eef0ff;--chip-ink:#3730a3;--hero:#12172b;--hero-ink:#ffffff;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1020;--surface:#151a2e;--ink:#eef1fb;--muted:#a3adc7;--line:#252c47;
+    --accent:#8b83ff;--accent2:#2dd4bf;--chip:#1f2547;--chip-ink:#c4c0ff;--hero:#0a0d1a;--hero-ink:#ffffff;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1020;--surface:#151a2e;--ink:#eef1fb;--muted:#a3adc7;--line:#252c47;
+  --accent:#8b83ff;--accent2:#2dd4bf;--chip:#1f2547;--chip-ink:#c4c0ff;--hero:#0a0d1a;--hero-ink:#ffffff;color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.logo{font-weight:800;letter-spacing:.02em;text-decoration:none}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:18px;font-size:14px;font-weight:600;overflow-x:auto;white-space:nowrap}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--accent)}
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--accent) 0%,transparent 68%);opacity:.45}
+.hero .wrap{padding-top:84px;padding-bottom:84px;position:relative;z-index:1}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin-bottom:14px}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.04;margin:0 0 14px;font-weight:800;letter-spacing:-.02em}
+.role{font-size:clamp(18px,2.6vw,24px);font-weight:600;opacity:.92;margin:0 0 18px}
+.lead{max-width:680px;font-size:17px;opacity:.82;margin:0 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn.primary{background:var(--accent2);border-color:var(--accent2);color:#06231f}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:-40px;position:relative;z-index:2}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 8px 24px rgba(10,13,26,.08)}
+.stat b{display:block;font-size:30px;font-weight:800;color:var(--accent);line-height:1.1}
+.stat span{font-size:13px;color:var(--muted);font-weight:500}
+section{padding:68px 0 0}
+h2{font-size:clamp(26px,4vw,34px);margin:0 0 8px;font-weight:800;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 28px;max-width:640px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.timeline{display:grid;gap:18px}
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px}
+.job .when{color:var(--muted);font-size:14px;font-weight:600}
+.job .when strong{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+.job h3{margin:0;font-size:20px}
+.job .proj{color:var(--accent);font-weight:700;font-size:14px;margin:2px 0 12px}
+.job ul{margin:0;padding-left:20px;color:var(--muted)}
+.job li{margin:0 0 9px}
+.job li::marker{color:var(--accent2)}
+.tag{display:inline-block;background:var(--chip);color:var(--chip-ink);font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.grid h3{margin:0 0 12px;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);color:var(--chip-ink);padding:6px 13px;border-radius:999px;font-size:13.5px;font-weight:600}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.cert{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.badge{flex:none;width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;font-size:12px;text-align:center;line-height:1.1}
+.cert b{display:block;font-size:15px}
+.cert span{color:var(--muted);font-size:13.5px}
+.award{display:flex;gap:16px;align-items:center}
+.award .star{font-size:34px}
+footer{margin-top:84px;border-top:1px solid var(--line);padding:30px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){
+  .job{grid-template-columns:1fr;gap:10px}
+  .hero .wrap{padding-top:60px;padding-bottom:70px}
+  .links{gap:14px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">ALFINA<span>.</span></a>
+  <div class="links"><a href="#experience">Experience</a><a href="#achievements">Impact</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#awards">Awards</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="eyebrow">Dynamics 365 CRM · Power Platform · Copilot Studio</span>
+  <h1>Alfina Sulficar</h1>
+  <p class="role">Techno-Functional Consultant</p>
+  <p class="lead">Microsoft Dynamics 365 CRM techno-functional consultant with 5+ years of experience in CRM configuration, customization, support and Power Platform delivery, plus hands-on Copilot Studio agents, for enterprise teams.</p>
+  <div class="cta"><a class="btn primary" href="#experience">View my work</a><a class="btn" href="#contact">Contact me</a></div>
+</div></header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><b>5+</b><span>Years in Power Platform</span></div>
+    <div class="stat"><b>5</b><span>Microsoft certifications</span></div>
+    <div class="stat"><b>2×</b><span>Infosys RISE INSTA Award</span></div>
+    <div class="stat"><b>Coca-Cola</b><span>Enterprise client account</span></div>
+  </div>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p class="sub">I turn business requirements into scalable technical solutions, from requirement workshops and design through UAT, deployment and release.</p>
+    <div class="card"><p style="margin:0;color:var(--muted)">I have a strong understanding of solution architecture, design standards, governance and platform administration for Power Platform and related Microsoft technologies in enterprise environments. I’m comfortable with low-code and no-code solutions, especially around AI and automation, and I enjoy client engagement, requirement gathering and leading cross-functional teams to deliver high-impact automation projects on time.</p></div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p class="sub">Five years at Infosys across Dynamics 365 CRM development, production support and Power Platform delivery.</p>
+    <div class="timeline">
+      <article class="card job">
+        <div class="when"><strong>Infosys</strong>Sept 2021 – Sept 2026</div>
+        <div>
+          <h3>Techno-Functional Consultant <span class="tag">MS Dynamics + Power Platform</span></h3>
+          <div class="proj">Project: Coca-Cola</div>
+          <ul>
+            <li>Analyzed functional and business requirements and translated them into scalable Dynamics 365 CRM solutions.</li>
+            <li>Designed and maintained entities, relationships, forms, views and dashboards, with Dataverse data models, validation rules and access controls.</li>
+            <li>Extended the platform with plugins, workflows, business rules, Business Process Flows and JavaScript web resources to automate business operations.</li>
+            <li>Managed solution deployments, testing and environment migrations across Development, QA and Production using Azure DevOps, including release pipeline administration.</li>
+            <li>Delivered low-code apps, automation, customer portals and dashboards with Power Apps, Power Automate, Power Pages and Power BI.</li>
+            <li>Designed, configured and deployed Copilot Studio agents end to end, integrated with Teams, Outlook, SharePoint and Dataverse. The chatbots give real-time ticket status, escalate to live agents and surface knowledge articles across business units.</li>
+            <li>Ran functional testing and UAT, wrote functional specifications and technical documentation, and handed over knowledge-transfer material.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card job">
+        <div class="when"><strong>Infosys</strong>Earlier project</div>
+        <div>
+          <h3>Support Engineer, MS Dynamics CRM <span class="tag">+ Power Platform Developer</span></h3>
+          <div class="proj">Project: BIGKO</div>
+          <ul>
+            <li>Handled a high volume of customer inquiries and support requests in Dynamics 365 CRM, resolving issues quickly with strong analytical skills.</li>
+            <li>Identified system issues, performed root cause analysis and delivered timely fixes to keep the application stable and performing.</li>
+            <li>Contributed to project testing, deployment and post-release support, working with cross-functional teams to troubleshoot and enhance CRM applications.</li>
+            <li>As a Power Platform developer, gathered requirements and built workflow automation with Power Automate, plus Power Apps (canvas and model-driven), Power BI and Power Pages, with attention to governance and platform administration.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Key project achievements</h2>
+    <p class="sub">Selected outcomes on the Coca-Cola Dynamics 365 CRM programme.</p>
+    <div class="grid">
+      <div class="card"><h3>Automated user provisioning</h3><p style="margin:0;color:var(--muted)">Automated Dynamics 365 onboarding and deactivation, covering licenses, Active Directory groups, business units, teams and agent preferences, which cut manual effort.</p></div>
+      <div class="card"><h3>Power Automate optimization</h3><p style="margin:0;color:var(--muted)">Used trigger conditions, conditional logic and iterative processing to reduce unnecessary runs and failures and make notifications more reliable.</p></div>
+      <div class="card"><h3>Approval &amp; notification automation</h3><p style="margin:0;color:var(--muted)">Added approver comments, cancellation logic and dynamic recipients based on agent preferences and team membership, improving traceability.</p></div>
+      <div class="card"><h3>P2P Service Desk dashboard</h3><p style="margin:0;color:var(--muted)">Built a Dynamics 365 dashboard to monitor active cases, unpicked team cases, pending tasks, case emails and escalations.</p></div>
+      <div class="card"><h3>Production defect resolution</h3><p style="margin:0;color:var(--muted)">Fixed issues with task permissions, approval cancellations, notifications and Customer Voice surveys through root-cause analysis, improving SLA compliance.</p></div>
+      <div class="card"><h3>Service recovery leadership</h3><p style="margin:0;color:var(--muted)">Led stabilization efforts on recurring issues with corrective and preventive actions, reducing escalations and improving SLA adherence.</p></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical skills</h2>
+    <p class="sub">A mix of low-code platform depth and hands-on development.</p>
+    <div class="grid">
+      <div class="card"><h3>Power Platform</h3><div class="chips"><span class="chip">Power Apps (Model-driven)</span><span class="chip">Power Apps (Canvas)</span><span class="chip">Power Automate</span><span class="chip">Power Pages</span><span class="chip">Power BI</span><span class="chip">Dataverse</span></div></div>
+      <div class="card"><h3>AI &amp; Copilots</h3><div class="chips"><span class="chip">Copilot Studio</span><span class="chip">Custom agents</span><span class="chip">AI chatbots</span><span class="chip">Azure AI</span></div></div>
+      <div class="card"><h3>Microsoft Dynamics 365 CRM</h3><div class="chips"><span class="chip">Customer Service</span><span class="chip">Sales</span><span class="chip">OOB configuration</span><span class="chip">Plugins &amp; workflows</span><span class="chip">Business rules &amp; BPFs</span><span class="chip">Security &amp; access controls</span></div></div>
+      <div class="card"><h3>Development &amp; Azure</h3><div class="chips"><span class="chip">C# plugins</span><span class="chip">JavaScript web resources</span><span class="chip">PCF controls</span><span class="chip">Azure Functions</span><span class="chip">XRMToolBox</span></div></div>
+      <div class="card"><h3>Delivery &amp; ALM</h3><div class="chips"><span class="chip">Azure DevOps</span><span class="chip">Sprints</span><span class="chip">Deployments</span><span class="chip">Testing &amp; UAT</span><span class="chip">Environment migrations</span></div></div>
+      <div class="card"><h3>Consulting &amp; support</h3><div class="chips"><span class="chip">Root cause analysis</span><span class="chip">Production support</span><span class="chip">Requirement gathering</span><span class="chip">Demos &amp; workshops</span><span class="chip">User story refinement</span><span class="chip">Client engagement</span></div></div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <h2>Certifications</h2>
+    <p class="sub">Microsoft certifications across Power Platform, Dynamics 365 and Azure AI, plus Infosys Lex courses on Copilot Studio and generative AI.</p>
+    <div class="certs">
+      <div class="cert"><div class="badge">PL-900</div><div><b>Power Platform Fundamentals</b><span>Microsoft</span></div></div>
+      <div class="cert"><div class="badge">MB-910</div><div><b>Dynamics 365 Fundamentals (CRM)</b><span>Microsoft</span></div></div>
+      <div class="cert"><div class="badge">MB-210</div><div><b>Dynamics 365 for Sales</b><span>Microsoft</span></div></div>
+      <div class="cert"><div class="badge">MB-230</div><div><b>Dynamics 365 Customer Service</b><span>Microsoft</span></div></div>
+      <div class="cert"><div class="badge">AI-102</div><div><b>Designing &amp; Implementing a Microsoft Azure AI Solution</b><span>Microsoft</span></div></div>
+      <div class="cert"><div class="badge">Lex</div><div><b>Creating Agents using Microsoft Copilot Studio</b><span>Infosys Lex</span></div></div>
+      <div class="cert"><div class="badge">Lex</div><div><b>Microsoft Copilot Studio Essentials</b><span>Infosys Lex</span></div></div>
+      <div class="cert"><div class="badge">Lex</div><div><b>Generative AI Landscape</b><span>Infosys Lex</span></div></div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Awards &amp; achievements</h2>
+    <p class="sub">Recognized for performance and contribution within the team.</p>
+    <div class="card award"><div class="star" aria-hidden="true">🏆</div><div><b>Infosys RISE INSTA Award</b><div style="color:var(--muted)">Received in June 2024 and again in May 2026 for exceptional performance and contributions within the team. Part of Infosys’ peer-to-peer recognition program, for consistent high-quality work.</div></div></div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="card"><b>Bachelor of Technology, Computer Science Engineering</b><div style="color:var(--muted)">College of Engineering Attingal, Kerala · 2017 – 2021 · CGPA 7.41</div></div>
+  </section>
+<section id="contact">
+    <h2>Get in touch</h2>
+    <p class="sub">Open to Dynamics 365 CRM and Power Platform opportunities in the UAE.</p>
+    <div class="grid">
+      <a class="card" href="mailto:alfinasulficar@gmail.com" style="text-decoration:none"><h3>Email</h3><div style="color:var(--accent);font-weight:700;word-break:break-all">alfinasulficar@gmail.com</div></a>
+      <a class="card" href="tel:+971506106757" style="text-decoration:none"><h3>Phone</h3><div style="color:var(--accent);font-weight:700">+971 50 610 6757</div></a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© Alfina Sulficar</span><span>Open to Dynamics 365 and Power Platform roles in the UAE</span></div></footer>
+</body>
+</html>
